@@ -9,7 +9,7 @@
     _paths = ['server/**/*.js', 'client/js/*.js'];
 
 
-  //register nodemon task
+  //register nodemon tasks
   gulp.task('nodemon', function() {
     nodemon({
       script: 'server/app.js',
