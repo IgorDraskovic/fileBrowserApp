@@ -11,11 +11,11 @@
     res.render('index');
   });
 
-  /* Serve the Tree */
+  /* Hit the end point and serve the tree */
   router.get('/api/tree', function(req, res) {
     var _p;
     if (req.query.id == 1) {
-      _p = path.resolve(__dirname, '..', 'node_modules');
+      _p = path.resolve(__dirname, '../..', 'fileBrowserApp');
       processReq(_p, res);
 
     } else {
@@ -28,7 +28,7 @@
     }
   });
 
-  /* Serve a Resource */
+  /* Serve the tree node/resource */
   router.get('/api/resource', function(req, res) {
     res.send(fs.readFileSync(req.query.resource, 'UTF-8'));
   });
@@ -43,6 +43,7 @@
     });
   }
 
+  /* Tree node object format */
   function processNode(_p, f) {
     var s = fs.statSync(path.join(_p, f));
     return {

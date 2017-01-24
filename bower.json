@@ -2,9 +2,9 @@
   "name": "myFileBrowserApp",
   "version": "0.1.0",
   "authors": [
-    "arvindr21 <arvind.ravulavaru@gmail.com>"
+    "kmdd"
   ],
-  "description": "An Angularjs, jsTree and Expressjs web based File Browser app",
+  "description": "File Browser app",
   "main": "server/app.js",
   "moduleType": [
     "node"
